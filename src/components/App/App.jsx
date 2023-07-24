@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import { lazy } from "react";
 import { Toaster } from 'react-hot-toast';
 import SharedLayout from "components/SharedLayout";
