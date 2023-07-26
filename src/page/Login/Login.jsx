@@ -1,23 +1,12 @@
-const { Formik, Form, Field } = require("formik")
+import { LoginForm } from '../../components/LoginForm/LoginForm';
 
 
-const Login = ()  => {
-    return (
-        <Formik>
-            <Form>
-                <label>
-                    Enter yor email
-                    <Field type="email" name="email" />
-                </label>
-                <label>
-                    Enter your password
-                    <Field type="password" name="password" />
-                </label>
-                <button type="submit" >
-                    Login
-                </button>
-            </Form>
-        </Formik>
+const Login = () => {
+    return(
+        <div>
+            <h1>Log In</h1>
+            <LoginForm />
+        </div>
     )
 }
 
