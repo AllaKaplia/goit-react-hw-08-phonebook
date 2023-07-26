@@ -1,7 +1,6 @@
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectorIsLoggedIn } from 'redux/auth/authSelectors';
+import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 
 
@@ -18,22 +17,23 @@ const initialValue = {
 const LoginForm = ()  => {
     const dispatch = useDispatch();
 
-    const handleSubmit = () => {
-        dispatch(logIn(
-            
-        ))
+    const handleSubmit = (values, { resetForm }) => {
+        dispatch(logIn(values));
+        resetForm();
     }
 
     return (
-        <Formik initialValues={initialValue} validationSchema={schema} >
+        <Formik initialValues={initialValue} validationSchema={schema} onSubmit={handleSubmit} >
             <Form>
                 <label>
-                    Enter yor email
+                    <span>Enter yor email</span>
                     <Field type="email" name="email" />
+                    <ErrorMessage name="email" component="div" />
                 </label>
                 <label>
-                    Enter your password
+                    <span>Enter your password</span>
                     <Field type="password" name="password" />
+                    <ErrorMessage name="password" component="div" />
                 </label>
                 <button type="submit" >
                     Login
