@@ -34,8 +34,8 @@ const UserMenu = () => {
                 onFocus={handleMouseEnter}
                 onBlur={handleMouseLeave}
             >
-                {isHovered ? <SentimentVeryDissatisfiedIcon /> : <SentimentSatisfiedAltIcon />}
                 Log Out
+                {isHovered ? <SentimentVeryDissatisfiedIcon /> : <SentimentSatisfiedAltIcon />}
             </Button>
         </BoxMenu>
     )
