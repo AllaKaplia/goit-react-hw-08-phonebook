@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "redux/auth/authOperations";
 import * as yup from 'yup';
+import Button from '@mui/material/Button';
 
 const initialValues = {
     name: '',
@@ -45,9 +46,9 @@ const RegisterForm = () => {
                     <Field type="password" name="password" placeholder="Enter password" />
                     <ErrorMessage name="password" component="div" />
                 </label>
-                <button type="submit" >
+                <Button variant="contained" color="success" type="submit" >
                     Register
-                </button>
+                </Button>
             </Form>
         </Formik>
     )
