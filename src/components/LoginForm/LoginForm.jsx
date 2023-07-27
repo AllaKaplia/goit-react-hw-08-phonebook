@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
+import Button from '@mui/material/Button';
 
 
 const schema = yup.object().shape({
@@ -35,9 +36,9 @@ const LoginForm = ()  => {
                     <Field type="password" name="password" />
                     <ErrorMessage name="password" component="div" />
                 </label>
-                <button type="submit" >
+                <Button variant="contained" color="success" type="submit" >
                     Login
-                </button>
+                </Button>
             </Form>
         </Formik>
     )
