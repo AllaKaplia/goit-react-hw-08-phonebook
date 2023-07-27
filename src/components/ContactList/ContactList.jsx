@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { removeContact, fetchContacts } from '../../redux/contactsOperations';
 import { selectError, selectIsLoading, selectVisibleContacts } from '../../redux/selectors';
 import toast from 'react-hot-toast';
-import { ContactsList, ContactItem, RemoveBtn, DataContacts } from './ContactsList.styled';
+import { ContactsList, ContactItem, RemoveBtn, DataContacts, NoContacts } from './ContactsList.styled';
 import Loader from 'components/Loader';
 import { MdDeleteForever } from 'react-icons/md';
 import { FcTwoSmartphones } from 'react-icons/fc';
@@ -40,7 +40,7 @@ const ContactList = () => {
           ))}
         </ContactsList>
       ) : (
-        <p>No contacts found.</p>
+        <NoContacts>No contacts found.</NoContacts>
       )}
     </div>
   );
