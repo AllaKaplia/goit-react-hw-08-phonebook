@@ -14,7 +14,7 @@ const Home = () => {
             <TitleHome>Welcome to your personal contact inbox! <HomeIcon sx={{ fontSize: 40}} /> </TitleHome>
             <HeroHome>
                 <MainImg src={photoHero} alt="Phone book" width={400} />
-                <p><Text>This place is specifically created for storing your contacts that no longer fit in your notebook. You can create a convenient list here with no limitations on the number. How to use the application:</Text>
+                <div><Text>This place is specifically created for storing your contacts that no longer fit in your notebook. You can create a convenient list here with no limitations on the number. How to use the application:</Text>
                     <List>
                         <li>1. Register in the system.  <HowToRegIcon /> </li>
                         <li>2. Log in / Authenticate. <LoginIcon /> </li>
@@ -24,7 +24,7 @@ const Home = () => {
                         <li>6. Use the form for convenient search. <PersonSearchIcon /> </li>
                     </List>
                     <Text>And remember: this is your personal contact list. Only you have access to it. We prioritize the security of your personal data!</Text>
-                </p>
+                </div>
             </HeroHome>
         </BoxHome>
     )
