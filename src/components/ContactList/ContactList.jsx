@@ -7,6 +7,7 @@ import { ContactsList, ContactItem, RemoveBtn, DataContacts, NoContacts } from '
 import Loader from 'components/Loader';
 import { MdDeleteForever } from 'react-icons/md';
 import { FcTwoSmartphones } from 'react-icons/fc';
+import { ContainerForm } from 'components/RegisterForm/RegisterForm.styled';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <ContainerForm>
       {loading && <Loader />}
       {error && <p>{error}</p>}
       {visibleContacts.length > 0 ? (
@@ -42,7 +43,7 @@ const ContactList = () => {
       ) : (
         <NoContacts>No contacts found.</NoContacts>
       )}
-    </div>
+    </ContainerForm>
   );
 };
 
