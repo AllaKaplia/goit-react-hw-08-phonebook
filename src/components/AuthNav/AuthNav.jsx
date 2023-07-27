@@ -1,16 +1,15 @@
-import { StyleLink } from "components/Navigation/Navigation.styled";
-import { ContainerAuth } from "./AuthNav.styled";
+import { ContainerAuth, StyleNav } from "./AuthNav.styled";
 
 
 const AuthNav = () => {
     return(
         <ContainerAuth>
-            <StyleLink to="/register" >
+            <StyleNav to="/register" >
                 Register user
-            </StyleLink>
-            <StyleLink to="/login" >
+            </StyleNav>
+            <StyleNav to="/login" >
                 Log in
-            </StyleLink>
+            </StyleNav>
         </ContainerAuth>
     )
 };
