@@ -1,6 +1,9 @@
 import { useAuth } from "hooks";
 import { useDispatch } from "react-redux";
 import { logOut } from "redux/auth/authOperations";
+import { BoxMenu, HelloUser } from "./UserMenu.styled";
+import Button from '@mui/material/Button';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 
 
 const UserMenu = () => {
@@ -9,10 +12,10 @@ const UserMenu = () => {
     const { user } = useAuth();
 
     return (
-        <div>
-            <p>Congratulations, {user.name}</p>
-            <button type="button" onClick={() => dispatch(logOut())}>Log Out</button>
-        </div>
+        <BoxMenu>
+            <HelloUser>Congratulations, {user.name} <EmojiEmotionsIcon /> </HelloUser>
+            <Button variant="contained" color="success" type="button" onClick={() => dispatch(logOut())}>Log Out</Button>
+        </BoxMenu>
     )
 }
 
