@@ -1,22 +1,25 @@
-import { NavLink } from "react-router-dom";
 import { useAuth } from "hooks";
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import { Nav, StyleLink } from "./Navigation.styled";
+import HolidayVillageIcon from '@mui/icons-material/HolidayVillage';
+import RecentActorsIcon from '@mui/icons-material/RecentActors';
 
 
 const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
-        <nav>
-            <NavLink to="/">
+        <Nav>
+            <StyleLink to="/">
                 <ContactPhoneIcon sx={{ fontSize: 40}} />
                 <span>PhoneBook</span>
-            </NavLink>
-            <NavLink to="/">
+            </StyleLink>
+            <StyleLink to="/">
+                <HolidayVillageIcon />
                 <span>Home</span>
-            </NavLink>
-            { isLoggedIn && <NavLink to="/contacts"> Contacts </NavLink>}
-        </nav>
+            </StyleLink>
+            { isLoggedIn && <StyleLink to="/contacts"> <RecentActorsIcon />  Contacts </StyleLink>}
+        </Nav>
     );
 };
 
