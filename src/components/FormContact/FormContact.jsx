@@ -56,6 +56,7 @@ const FormContact = () => {
     dispatch(addContact(newContact));
 
     resetForm();
+    toast.success('Contact successfully added to the list!');
   };
 
   return (
