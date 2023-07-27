@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { ErrorMessage } from 'formik';
 import { NavLink } from "react-router-dom";
 
 export const StyleLink = styled(NavLink)`
@@ -16,3 +17,8 @@ export const Nav = styled.nav`
     align-items: center;
     gap: 35px;
 `;
+
+export const Problem = styled(ErrorMessage)`
+    font-size: 25px;
+    color: red;
+`
