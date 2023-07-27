@@ -7,6 +7,7 @@ import { BoxBig, ContainerForm, FieldInput, LabelText } from "./RegisterForm.sty
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 import PasswordIcon from '@mui/icons-material/Password';
+import toast from "react-hot-toast";
 
 const initialValues = {
     name: '',
@@ -30,6 +31,7 @@ const RegisterForm = () => {
     const handleSubmit = (values, { resetForm }) => {
         dispatch(register(values));
         resetForm();
+        toast.success('You have successfully created a profile in the PhoneBook application!')
     }
 
     return (
