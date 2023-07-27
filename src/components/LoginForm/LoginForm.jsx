@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import { BoxBig, ContainerForm, FieldInput, LabelText } from 'components/RegisterForm/RegisterForm.styled';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 import PasswordIcon from '@mui/icons-material/Password';
+import toast from 'react-hot-toast';
 
 
 const schema = yup.object().shape({
@@ -24,6 +25,7 @@ const LoginForm = ()  => {
     const handleSubmit = (values, { resetForm }) => {
         dispatch(logIn(values));
         resetForm();
+        toast.success('You have successfully logged into the system!');
     }
 
     return (
@@ -49,6 +51,6 @@ const LoginForm = ()  => {
             </Formik>
         </ContainerForm>
     )
-}
+};
 
 export default LoginForm;
