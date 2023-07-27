@@ -45,3 +45,11 @@ export const DataContacts = styled.span`
     font-weight: 500;
     color: #3f3030;
 `;
+
+export const NoContacts = styled.p`
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #0b9448;
+    margin-bottom: 20px;
+`;
