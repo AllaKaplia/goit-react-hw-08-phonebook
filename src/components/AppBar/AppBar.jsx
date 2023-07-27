@@ -2,17 +2,18 @@ import AuthNav from "components/AuthNav";
 import Navigation from "components/Navigation";
 import UserMenu from "components/UserMenu";
 import { useAuth } from "hooks";
-import AppBar from '@mui/material/AppBar';
+import { Header } from "./AppBar.styled";
+
 
 
 const AppBox = () => {
     const { isLoggedIn } = useAuth();
 
     return(
-        <AppBar >
+        <Header>
             <Navigation />
             {isLoggedIn ? <UserMenu /> : <AuthNav />}
-        </AppBar>
+        </Header>
     );
 };
 
