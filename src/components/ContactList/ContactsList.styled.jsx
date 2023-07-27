@@ -5,8 +5,10 @@ export const ContactsList = styled.ul`
     padding: 0;
     margin: 0 auto;
 
-    max-width: 800px;
-    border: 1px solid greenyellow;
+    max-width: 600px;
+    border: 2px solid #27874f;
+    border-radius: 10px;
+    margin-bottom: 20px;
 `;
 
 export const ContactItem = styled.li`
