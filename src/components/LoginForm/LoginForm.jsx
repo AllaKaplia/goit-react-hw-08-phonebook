@@ -31,7 +31,7 @@ const LoginForm = ()  => {
     return (
         <ContainerForm>
             <Formik initialValues={initialValue} validationSchema={schema} onSubmit={handleSubmit} >
-                <Form>
+                <Form autoComplete="off">
                     <BoxBig>
                         <label>
                             <LabelText> <MarkEmailReadIcon /> Enter yor email</LabelText>
